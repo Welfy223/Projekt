@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Lugrasimo&family=Rubik:ital,wght@0,300..900;1,300..900&family=Tac+One&display=swap');
+
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Georgia;
+}
+
+body {
+    background-color: rgb(54, 69, 79);
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.logoimenu{
+    width: 10%;
+    height: 10%;
+    position: fixed;
+    right: 0%;
+}
+
+.container {
+    height: 100%;
+    width: 250px;
+    position: absolute;
+    background: #22313f;
+    z-index: 1;
+    transition: 0.5s ease;
+    transform: translateX(-250px);
+    height: fit-content;
+    position: fixed;
+}
+
+.container .head{
+    color: #fbfdce;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+    background: linear-gradient(30deg,#8dc6ff,#34495e);
+}
+
+ol {
+    width: 100%;
+    list-style: none;   
+}
+
+ol li {
+    display: block;
+    width: 100%;
+}
+
+ol li a {
+    color: #fbfdce;
+    padding: 15px 10px;
+    text-decoration: none;
+    display: block;
+    font-size: 19px;
+    letter-spacing: 1px;
+    position: relative;
+    transition: 0.3s;
+    overflow: hidden;
+    text-transform: capitalize;
+}
+
+ol li a i {
+    width: 70px;
+    font-size: 25px;
+    text-align: center;
+    padding-left: 30px;
+
+}
+
+ol li:hover a {
+    background: #030303;
+    color: #00eaff;
+    letter-spacing: 5px;
+}
+
+input {
+    visibility: hidden;
+    display: none;
+}
+
+span {
+    position: absolute;
+    right: -40px;
+    top: 30px;
+    font-size: 25px;
+    border-radius: 3px;
+    color: #fff;
+    padding: 3px 8px;
+    cursor: pointer;
+    background: #000;
+}
+
+#bars {
+    background: rgb(88, 213, 255);
+}
+
+#check:checked ~ .container {
+    transform: translateX(0);
+}
+
+#check:checked ~ .container #bars {
+    display: none;
+}
+
+.HDR {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    margin-top: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial;
+}
+
+.HDR a {
+    text-decoration: none;
+    margin-left: 5px;
+    margin-top: 10px;
+    color: orange;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+.GdzieJestem {
+    font-weight: bold;
+}
+
+h3{
+    text-align: center;
+    background-color:rgb(1,31,75);
+    color: white;
+    font-size: 30px;
+}
+
+.akapit p{
+    text-align: left;
+    text-indent: 25px;
+    color: #8dc6ff; 
+    margin-right: 15px;
+}
+
+.wrapper img{
+    max-width: 320px;
+    float: left;
+    border: 3px solid #838362;
+    border-radius: 10px;
+    margin-right: 15px;
+    text-align: center;
+}
+
+.wrapper img:hover{
+    animation: alternate zdjecie 1s forwards 2;
+}
+
+@keyframes zdjecie {
+    from{
+        rotate: 0deg;
+    }
+    to{
+        rotate: 360deg;
+    }
+}
+
+.wrapper{
+    margin: 50px auto;
+    max-width: 70%;
+    background: #22313f;
+}
+
+.mmain{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    clear: both;
+}
+
+.textbox {
+    color: #fff;
+    text-align: center;
+}
+
+.textbox h2{
+    font-size: 34px;
+    background: #34495e; 
+}
+
+.textbox p{
+    font-size: 16px;
+    margin-top: 7.5px;
+    text-align: center;
+    font-family: "Lora", serif;
+}
+.textbox a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-style: italic;
+    transition: all 0.5s;
+}
+
+.textbox a:hover{
+    color: red;
+    letter-spacing: 0.5px;
+}
+
+.oddzialka {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 5px;
+    border: slategrey 2px dashed;
+}
+
+footer{
+    position: sticky;
+    bottom: 0%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: large;
+}
+
+@media only screen and (min-width: 601px) and (max-width: 874px){
+    .akapit .textbox{
+        height: fit-content;
+        width: 100%;
+    }
+    .textbox h2{
+        font-size: 20px;
+        text-align: center;
+    }
+    .textbox{
+        width: 570px;
+        height: 321px;
+        background: #22313f;
+    }
+    h3{
+        font-size: 15px;
+    }
+    .wrapper{
+        background-color: rgb(54, 69, 79);
+    }
+    .wrapper img{
+        float: none;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+  }
+
+@media only screen and (max-width: 600px) {
+    .akapit .textbox{
+        height: fit-content;
+        width: 350px;
+    }
+    .textbox h2{
+        font-size: 20px;
+    }
+    .textbox{
+        width: 349px;
+        height: 514px;
+    }
+    h3{
+        font-size: 15px;
+    }
+    .textbox h2{
+        width: 355px;
+    }
+    .wrapper img{
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+}

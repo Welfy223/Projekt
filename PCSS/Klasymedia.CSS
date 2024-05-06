@@ -1,0 +1,197 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Georgia, serif;
+}
+
+body {
+    background-color: rgb(54, 69, 79);
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.logoimenu img{
+    width: 10%;
+    height: 10%;
+    position: fixed;
+    right: 0%;
+}
+
+.container {
+    height: 100%;
+    width: 250px;
+    position: absolute;
+    background: #22313f;
+    z-index: 1;
+    transition: 0.5s ease;
+    transform: translateX(-250px);
+    height: fit-content;
+    position: fixed;
+}
+
+.container .head{
+    color: #fbfdce;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+    background: linear-gradient(30deg,#8dc6ff,#34495e);
+}
+
+ol {
+    width: 100%;
+    list-style: none;   
+}
+
+ol li {
+    display: block;
+    width: 100%;
+}
+
+ol li a {
+    color: #fbfdce;
+    padding: 15px 10px;
+    text-decoration: none;
+    display: block;
+    font-size: 19px;
+    letter-spacing: 1px;
+    position: relative;
+    transition: 0.3s;
+    overflow: hidden;
+    text-transform: capitalize;
+}
+
+ol li a i {
+    width: 70px;
+    font-size: 25px;
+    text-align: center;
+    padding-left: 30px;
+
+}
+
+ol li:hover a {
+    background: #030303;
+    color: #00eaff;
+    letter-spacing: 5px;
+}
+
+input {
+    visibility: hidden;
+    display: none;
+}
+
+span {
+    position: absolute;
+    right: -40px;
+    top: 30px;
+    font-size: 25px;
+    border-radius: 3px;
+    color: #fff;
+    padding: 3px 8px;
+    cursor: pointer;
+    background: #000;
+}
+
+#bars {
+    background: rgb(88, 213, 255);
+}
+
+#check:checked ~ .container {
+    transform: translateX(0);
+}
+
+#check:checked ~ .container #bars {
+    display: none;
+}
+
+.hdr{
+    text-align: center;
+    margin-top: 15px;
+}
+
+.hdr p{
+    font-size: 25px;
+    font-variant: small-caps;
+    font-style: oblique;
+    font-weight: 600;
+    color: bisque;
+}
+
+.GdzieJestem{
+    font-weight: bold;
+}
+
+.oddzialka {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 5px;
+    border: slategrey 2px dashed;
+    margin-top: 15px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-style: italic;
+    font-size: 20px;
+    transition: all 1s;
+}
+
+a:hover{
+    color: red;
+    letter-spacing: 0.2px;
+}
+
+.area{
+    width: 75%;
+    height: fit-content;
+    margin: auto;
+}
+
+h2{
+    margin-top: 45px;
+}
+
+.przedmioty{
+    text-align: center;
+    display: flex;
+}
+
+.przedmioty img{
+    max-width: 70%;
+    max-height: 100%;
+}
+
+.przedmioty img:hover{
+    animation: alternate zdjecie 1s forwards 2;
+}
+
+@keyframes zdjecie {
+    from{
+        rotate: 0deg;
+    }
+    to{
+        rotate: 360deg;
+    }
+}
+
+footer{
+    position: fixed;
+    bottom: 0%;
+    width: 100%;
+    letter-spacing: 0.5px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: medium;
+}
+
+@media only screen and (max-width: 937px){
+    .przedmioty{
+        flex-direction: column;
+    }
+}
